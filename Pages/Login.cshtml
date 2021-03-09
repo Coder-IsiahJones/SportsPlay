@@ -1,0 +1,30 @@
+﻿@page
+@model SportsPlay.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+
+}
+
+<h1>Login</h1>
+
+<label>Message:</label>
+<label style="color: @Model.MessageColor">@Model.Message</label>
+
+<form method="post">
+    <table>
+        <tr>
+            <td><label>Email Address</label></td>
+            <td><input asp-for="EmailAddress" type="email" /></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input asp-for="Password" type="password" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input asp-page-handler="Login" type="submit" value="Login" />
+            </td>
+        </tr>
+    </table>
+</form>
